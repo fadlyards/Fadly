@@ -9,18 +9,23 @@ width: 100%;
 </style>
 </head>
 <body>
-<h3>Simpel Google Maps</h3>
+<h2>Simple Google Maps API</h2>
+<h4>Marker : Lokasi Rumah Saya</h4>
 <div id="map"></div>
 <script>
 function initMap() {
+//var image = 'https://www.iconfinder.com/data/icons/network-and-communication-10/16/25_tag_label_batch_card_price_marker-512.png';
 var lokasi= {lat: -7.226484, lng: 112.565315};
 var map = new google.maps.Map(document.getElementById('map'), {
-zoom: 10,
+zoom: 15,
 center: lokasi
+//icon: image
 });
+var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
 var marker = new google.maps.Marker({
 position: lokasi,
-map: map
+map: map,
+icon: image
 });
 }
 </script>
